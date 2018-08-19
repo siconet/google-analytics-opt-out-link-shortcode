@@ -10,6 +10,7 @@ License:      GNU General Public License v3.0
 License URI:  https://choosealicense.com/licenses/gpl-3.0/
 Text Domain:  siconet-google-analytics-opt-out-link
 Domain Path:  /languages
+GitHub Plugin URI: https://github.com/siconet/google-analytics-opt-out-link-shortcode
 */
 
 defined( 'ABSPATH' ) or die( 'Nice try - no script kiddies please!' );
@@ -48,7 +49,7 @@ function siconet_shortcode_google_optout_cookie_link($atts)
             document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'; 
             window[disableStr] = true; 
             <?php if ($showalertafterclick == "true" || $showalertafterclick === true) : ?>
-                alert(<?php echo $alertmsg; ?>);
+                alert('<?php echo $alertmsg; ?>');
             <?php endif; ?>
         }
     </script>
